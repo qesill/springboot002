@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title th:text="${title}"></title>
+    <!--/*/ <th:block th:include="fragments/general.html :: headerfiles"/>  /*/-->
+</head>
+<body>
+<p>
+<h2>Users:</h2>
+<table>
+    <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Email</th>
+    <th>City</th>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}" ></td>
+        <td th:text="${user.name}" ></td>
+        <td th:text="${user.surname}" ></td>
+        <td th:text="${user.email}" ></td>
+        <td th:text="${user.city}" ></td>
+    </tr>
+    </tbody>
+</table>
+</p>
+<div th:replace="fragments/language.html :: language"/>
+<footer th:replace="fragments/general.html :: footer(company='example.com', year='2030')"></footer>
+</body>
+</html>

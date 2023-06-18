@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<div th:fragment="language" >
+  <p>
+    <span th:text="#{greeting}" ></span>
+    <button type="button" th:text="#{lang.en}"
+            onclick="window.location.href='/?lang=en'" ></button>
+    <button type="button" th:text="#{lang.pl}"
+            onclick="window.location.href='/?lang=pl'" ></button>
+  </p>
+</div>
+</body>
+</html>
